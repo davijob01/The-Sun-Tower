@@ -1,2 +1,2 @@
 # The-Sun-Tower
-Little quick game for my college
+Little quick game for my college class
