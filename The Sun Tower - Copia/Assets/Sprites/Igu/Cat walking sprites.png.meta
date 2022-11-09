@@ -1,0 +1,729 @@
+fileFormatVersion: 2
+guid: 605c2dd04e748ff4f9dec1c11c2c8448
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 400
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cat walking sprites_0
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 2649
+        width: 1055
+        height: 738
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb96ec4d1257e414c92cb090b205bc42
+      internalID: 1869186426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat walking sprites_1
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 2649
+        width: 1062
+        height: 738
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9db479a4ce878e448a86f212a78c5d14
+      internalID: 764656291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat walking sprites_2
+      rect:
+        serializedVersion: 2
+        x: 2826
+        y: 2661
+        width: 1062
+        height: 737
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72220a837da09d64083bc20b7ce375dd
+      internalID: -1285570357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat walking sprites_3
+      rect:
+        serializedVersion: 2
+        x: 4035
+        y: 2672
+        width: 1061
+        height: 738
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99a76ead5bb80f44d8fa1b835ef3bdc8
+      internalID: 466890748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat walking sprites_4
+      rect:
+        serializedVersion: 2
+        x: 5221
+        y: 2672
+        width: 1056
+        height: 738
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf7c82c17ecf5743b535e89a6a434fa
+      internalID: 1758013227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat walking sprites_5
+      rect:
+        serializedVersion: 2
+        x: 6402
+        y: 2689
+        width: 1061
+        height: 738
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3b54bab6992284468544a866f95c2ca
+      internalID: -1025184137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat walking sprites_6
+      rect:
+        serializedVersion: 2
+        x: 7741
+        y: 2661
+        width: 1061
+        height: 737
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce2c284c3a37b04bafb2bd47366d68a
+      internalID: 909297910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat walking sprites_7
+      rect:
+        serializedVersion: 2
+        x: 8956
+        y: 2678
+        width: 1055
+        height: 737
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb21faed79c0e5e4fb9b99932e45991c
+      internalID: -599308104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat walking sprites_8
+      rect:
+        serializedVersion: 2
+        x: 10187
+        y: 2661
+        width: 1056
+        height: 737
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 087f347b961b111449012cf3aa0968d3
+      internalID: -871063321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat walking sprites_9
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 1674
+        width: 568
+        height: 737
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d7f46611fcc7d942a48c5ed09425705
+      internalID: -323003767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat walking sprites_10
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 1674
+        width: 574
+        height: 737
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf3f7f3e918e6234faa05c49f9f5044a
+      internalID: 1864496978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat walking sprites_11
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 1685
+        width: 574
+        height: 737
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e3b5aa98559acf41898e86d62a78083
+      internalID: -171103384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat walking sprites_12
+      rect:
+        serializedVersion: 2
+        x: 3712
+        y: 1696
+        width: 573
+        height: 738
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4be3ed60ceca3614a80858a373661bca
+      internalID: -1305832435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat walking sprites_13
+      rect:
+        serializedVersion: 2
+        x: 4801
+        y: 1696
+        width: 574
+        height: 738
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43e8e23b4e447d74a972c69a86e81b2f
+      internalID: 391260794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat walking sprites_14
+      rect:
+        serializedVersion: 2
+        x: 5562
+        y: 1713
+        width: 567
+        height: 738
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd07966d58504146a16186ce1c08fa1
+      internalID: 2133493339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat walking sprites_15
+      rect:
+        serializedVersion: 2
+        x: 6390
+        y: 1685
+        width: 568
+        height: 737
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9eeb7eb6a7b4d34cb8e025e353518c9
+      internalID: 598330134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat walking sprites_16
+      rect:
+        serializedVersion: 2
+        x: 7247
+        y: 1702
+        width: 574
+        height: 738
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1290f910496432c49a3073915437cc0e
+      internalID: -1792396391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat walking sprites_17
+      rect:
+        serializedVersion: 2
+        x: 8172
+        y: 1685
+        width: 574
+        height: 737
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1431b5dbbd4d17c4a997d40e5c007555
+      internalID: 1984051313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat walking sprites_18
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 647
+        width: 1010
+        height: 737
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15ef08b6e3ed93f468aaf19dd3aecb1c
+      internalID: -211911184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat walking sprites_19
+      rect:
+        serializedVersion: 2
+        x: 1521
+        y: 647
+        width: 1016
+        height: 737
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fba62c9f62fa9134999034462f437e3b
+      internalID: 2017575066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat walking sprites_20
+      rect:
+        serializedVersion: 2
+        x: 2588
+        y: 658
+        width: 1010
+        height: 738
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e79c88bdc083ba4c8495c8328be43f8
+      internalID: -1711728706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat walking sprites_21
+      rect:
+        serializedVersion: 2
+        x: 3683
+        y: 664
+        width: 1010
+        height: 737
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 951ebe1ec9cdfaa40b5c2f2bbbf92628
+      internalID: 280731466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat walking sprites_22
+      rect:
+        serializedVersion: 2
+        x: 4858
+        y: 681
+        width: 1010
+        height: 737
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f0fe5584476634ea2b5dc056413019
+      internalID: -1556840876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat walking sprites_23
+      rect:
+        serializedVersion: 2
+        x: 5987
+        y: 681
+        width: 1016
+        height: 737
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37096e395c4f6a4cae053dd269916ab
+      internalID: -386139855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat walking sprites_24
+      rect:
+        serializedVersion: 2
+        x: 7071
+        y: 658
+        width: 1016
+        height: 738
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9070fa55510031f4cbf76885ff17477d
+      internalID: -1280216877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat walking sprites_25
+      rect:
+        serializedVersion: 2
+        x: 8189
+        y: 669
+        width: 1011
+        height: 738
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e16536407f42a142bfd6b3543243023
+      internalID: 1256256580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat walking sprites_26
+      rect:
+        serializedVersion: 2
+        x: 9353
+        y: 658
+        width: 1016
+        height: 738
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ad69c0cf6b592440851a26228b43308
+      internalID: -1622677333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Cat walking sprites_1: 764656291
+      Cat walking sprites_4: 1758013227
+      Cat walking sprites_12: -1305832435
+      Cat walking sprites_18: -211911184
+      Cat walking sprites_16: -1792396391
+      Cat walking sprites_19: 2017575066
+      Cat walking sprites_10: 1864496978
+      Cat walking sprites_22: -1556840876
+      Cat walking sprites_9: -323003767
+      Cat walking sprites_17: 1984051313
+      Cat walking sprites_6: 909297910
+      Cat walking sprites_2: -1285570357
+      Cat walking sprites_14: 2133493339
+      Cat walking sprites_11: -171103384
+      Cat walking sprites_13: 391260794
+      Cat walking sprites_5: -1025184137
+      Cat walking sprites_3: 466890748
+      Cat walking sprites_7: -599308104
+      Cat walking sprites_20: -1711728706
+      Cat walking sprites_15: 598330134
+      Cat walking sprites_24: -1280216877
+      Cat walking sprites_25: 1256256580
+      Cat walking sprites_26: -1622677333
+      Cat walking sprites_23: -386139855
+      Cat walking sprites_8: -871063321
+      Cat walking sprites_21: 280731466
+      Cat walking sprites_0: 1869186426
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
