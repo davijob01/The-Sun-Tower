@@ -11,28 +11,31 @@ using Vector3 = UnityEngine.Vector3;
 public class PlayerScript : MonoBehaviour
 {                                          
     //CHECKS////////////////////////////////////////////////////
-                                                      
-    [HideInInspector] public bool isJumping = false;  
-    [HideInInspector] public bool facingRight = true; 
     
+    [HideInInspector] public bool isJumping = false;
+    [HideInInspector] public bool facingRight = true;
+
+    [HideInInspector] public bool atackUp = false;
+    [HideInInspector] public bool atackdown = false;
+
     //ATTACK////////////////////////////////////////////////////
 
-    public float atkCooldown = 0.25f;                  
-    float atkCountdown = 0f;                        
-    float atkTimer = 0f;                              
-    public float atkDuration = 0.15f;                        
-                                                      
+    public float atkCooldown = 0.25f;
+    float atkCountdown = 0f; 
+    float atkTimer = 0f;
+    public float atkDuration = 0.15f;
+    
     //OBJECTS///////////////////////////////////////////////////
-                                                      
-    public GameObject hitBox;                         
+    
+    public GameObject hitBox;
     public GroundCheck groundCheck;
     public Gravity gravityScr;
-                                                      
+    
     //MOVEMENT//////////////////////////////////////////////////
-                                                 
-    public float speed = 5.0f;                   
-    public float jumpForce = 10f;                
-                                                 
+    
+    public float speed = 5.0f;
+    public float jumpForce = 10f;
+    
     ////////////////////////////////////////////////////////////
     
     void Update()
@@ -105,17 +108,21 @@ public class PlayerScript : MonoBehaviour
 
             if (Input.GetKey(KeyCode.W)) //checks if the attack is up
             {
-                hitBox.transform.localPosition = new Vector3(0, 1.5f, 0);
+                hitBox.transform.localPosition = new Vector3(0.35f, 1.35f, 0);
                 hitBox.transform.localRotation = Quaternion.Euler(0, 0, 90);
+
+                atackUp = true;
             }
             else if (Input.GetKey(KeyCode.S) && !groundCheck.isGrounded) //checks if the attack is down and if the player is jumping
             {
-                hitBox.transform.localPosition = new Vector3(0, -1.5f, 0);
+                hitBox.transform.localPosition = new Vector3(0.35f, -1.35f, 0);
                 hitBox.transform.localRotation = Quaternion.Euler(0, 0, 90);
+
+                atackdown = true;
             }
             else //normal attack
             {
-                hitBox.transform.localPosition = new Vector3(1.5f, 0, 0);
+                hitBox.transform.localPosition = new Vector3(1.3f, 0, 0);
                 hitBox.transform.localRotation = Quaternion.Euler(0, 0, 0);
             }
 
@@ -125,6 +132,9 @@ public class PlayerScript : MonoBehaviour
         {
             hitBox.transform.position = new Vector3(0, 0, -15);
             hitBox.transform.localRotation = Quaternion.Euler(0, 0, 0);
+
+            atackdown = false;
+            atackUp = false;
         }
 
     }
