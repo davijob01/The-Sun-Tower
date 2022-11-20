@@ -6,6 +6,7 @@ TagManager:
   tags:
   - hitbox
   - enemy
+  - flying enemy
   layers:
   - Default
   - TransparentFX
@@ -13,8 +14,8 @@ TagManager:
   - ground
   - Water
   - UI
-  - 
-  - 
+  - Npc
+  - Player
   - 
   - 
   - 

@@ -6,6 +6,33 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/StartAnimation.unity
+    guid: 086080a25e72db64eb24650825909e22
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 0162ef5c472b8f74e89f7dde5bd198a0
+  - enabled: 1
+    path: Assets/Scenes/Forest Start Anim.unity
+    guid: 96ecdb40ab8887c4d938517dbfa76b85
+  - enabled: 1
+    path: Assets/Scenes/Forest.unity
+    guid: 2452d348a4050f24e8e6f64c347f2747
+  - enabled: 1
+    path: Assets/Scenes/City Start Animation.unity
+    guid: 11c6a1d0c4db6b947907f9fc1c5cc9e1
+  - enabled: 1
+    path: Assets/Scenes/City.unity
+    guid: 1339f8d9238939b478e2b473509e05b8
+  - enabled: 1
+    path: Assets/Scenes/Tower.unity
+    guid: 748210d1cd515ae4689dde6f3f4f2c8c
+  - enabled: 1
+    path: Assets/Scenes/Tower 2.unity
+    guid: 61e014ef42c93774f9d4032ce6768707
+  - enabled: 1
+    path: Assets/Scenes/Tower 3.unity
+    guid: ffd9f3330613d6341afb6eb36189ff34
+  - enabled: 1
+    path: Assets/Scenes/EndGame Anim.unity
+    guid: ee3c657971e2f1542a98e7887ee4cdbc
   m_configObjects: {}

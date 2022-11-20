@@ -4,27 +4,58 @@ using UnityEngine;
 
 public class EnemyGroundMovement : MonoBehaviour
 {
+    [Header("Detectors")]
+
     public FloorDetection floorDetector;
     public WallDetector wallDetector;
+    public PlayerDetector playerDetector;
+
+    [Header("Objects")]
+
+    public Transform playerTR;
     public Gravity gravityScr;
     public EnemyGroundCheck groundCheck;
 
+    [Header("Variables")]
+
     bool facingRight = true;
-
     public float speed;
+    public float runningSpeed;
+    [HideInInspector] public float startSpeed;
 
-    public float timer = 0.1f;
+    private void Start()
+    {
+        startSpeed = speed;
+
+        playerTR = GameObject.Find("Igu").GetComponent<Transform>();
+    }
 
     // Update is called once per frame
     void Update()
     {
         //SIMPLE CONSTANT MOVEMENT
 
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
+        if (playerDetector.playerDetected)
+        {
+            if(playerTR.position.x < transform.position.x)
+            {
+                if (!facingRight) TurnEnemy();
+            }
+            else
+            {
+                if(facingRight) TurnEnemy();
+            }
+
+            if (wallDetector.wallDetected || !floorDetector.groundDetected)
+            {
+                playerDetector.playerDetected = false;
+                speed = startSpeed;
+            }
+        }
+        
+        transform.Translate(Vector2.left * speed * Time.deltaTime);
 
         //TURNING CONTROLLER
-
-        if(timer >= 0) timer -= Time.deltaTime;
 
         if (wallDetector.wallDetected || !floorDetector.groundDetected) TurnEnemy();
 
@@ -32,7 +63,12 @@ public class EnemyGroundMovement : MonoBehaviour
 
         if (groundCheck.isGrounded)
         {
-            gravityScr.acceleration.y = -0f;
+            gravityScr.acceleration.y = 0f;
+            gravityScr.gravity = 0f;
+        }
+        else
+        {
+            gravityScr.gravity = -1f;
         }
     }
 

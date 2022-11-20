@@ -14,16 +14,22 @@ public class PlayerScript : MonoBehaviour
     
     [HideInInspector] public bool isJumping = false;
     [HideInInspector] public bool facingRight = true;
+    [HideInInspector] public bool canWalk = true;
 
     [HideInInspector] public bool atackUp = false;
     [HideInInspector] public bool atackdown = false;
+    [HideInInspector] public bool atack = false;
 
-    //ATTACK////////////////////////////////////////////////////
+    [HideInInspector] public bool hitboxUp = false;
+    [HideInInspector] public bool hitboxDown = false;
+
+    //ATTACK TIMERS////////////////////////////////////////////////////
 
     public float atkCooldown = 0.25f;
     float atkCountdown = 0f; 
-    float atkTimer = 0f;
+
     public float atkDuration = 0.15f;
+    float atkTimer = 0f;
     
     //OBJECTS///////////////////////////////////////////////////
     
@@ -31,7 +37,7 @@ public class PlayerScript : MonoBehaviour
     public GroundCheck groundCheck;
     public Gravity gravityScr;
     
-    //MOVEMENT//////////////////////////////////////////////////
+    //BASE MOVEMENT//////////////////////////////////////////////////
     
     public float speed = 5.0f;
     public float jumpForce = 10f;
@@ -43,8 +49,12 @@ public class PlayerScript : MonoBehaviour
         //MOVEMENT
         
         float horizontalInput = Input.GetAxis("Horizontal"); //gets the unity's default horizontal input
-        transform.Translate(Vector2.right * speed * horizontalInput * Time.deltaTime, Space.World); //move the player based on it's speed and direction relative to the world
 
+        if (canWalk)
+        {
+            transform.Translate(Vector2.right * speed * horizontalInput * Time.deltaTime, Space.World); //move the player based on it's speed and direction relative to the world
+        }
+        
         //checks if the last time player moved he was moving right or left and stores the information
 
         if (horizontalInput > 0) facingRight = true;
@@ -79,11 +89,11 @@ public class PlayerScript : MonoBehaviour
 
         //ROTATION
 
-        if (facingRight && atkTimer <= 0f) //checks if it's facing right and if it's not attacking and then change the y rotation to 0
+        if (facingRight && atkTimer <= 0f && canWalk) //checks if it's facing right and if it's not attacking and then change the y rotation to 0
         {
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
-        else if(!facingRight && atkTimer <= 0f) //checks if it's facing left and if it's not attacking and then change the y rotation to 180
+        else if(!facingRight && atkTimer <= 0f && canWalk) //checks if it's facing left and if it's not attacking and then change the y rotation to 180
         {
             transform.rotation = Quaternion.Euler(0, 180, 0);
         }
@@ -112,18 +122,22 @@ public class PlayerScript : MonoBehaviour
                 hitBox.transform.localRotation = Quaternion.Euler(0, 0, 90);
 
                 atackUp = true;
+                hitboxUp = true;
             }
             else if (Input.GetKey(KeyCode.S) && !groundCheck.isGrounded) //checks if the attack is down and if the player is jumping
             {
-                hitBox.transform.localPosition = new Vector3(0.35f, -1.35f, 0);
+                hitBox.transform.localPosition = new Vector3(0.35f, -0.85f, 0);
                 hitBox.transform.localRotation = Quaternion.Euler(0, 0, 90);
 
                 atackdown = true;
+                hitboxDown = true;
             }
             else //normal attack
             {
-                hitBox.transform.localPosition = new Vector3(1.3f, 0, 0);
+                hitBox.transform.localPosition = new Vector3(1.8f, 0, 0);
                 hitBox.transform.localRotation = Quaternion.Euler(0, 0, 0);
+
+                atack = true;
             }
 
         }
@@ -132,9 +146,6 @@ public class PlayerScript : MonoBehaviour
         {
             hitBox.transform.position = new Vector3(0, 0, -15);
             hitBox.transform.localRotation = Quaternion.Euler(0, 0, 0);
-
-            atackdown = false;
-            atackUp = false;
         }
 
     }

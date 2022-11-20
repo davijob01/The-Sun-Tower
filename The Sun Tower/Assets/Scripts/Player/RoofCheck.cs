@@ -8,6 +8,9 @@ public class RoofCheck : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        playerGravity.acceleration.y = 0f;
+        if(collision.gameObject.layer == LayerMask.NameToLayer("ground"))
+        {
+            playerGravity.acceleration.y = 0f;
+        }
     }
 }
