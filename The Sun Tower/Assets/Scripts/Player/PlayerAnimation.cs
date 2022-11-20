@@ -16,10 +16,28 @@ public class PlayerAnimation : MonoBehaviour
 
         else playerAnimator.SetBool("isWalking", false);
 
+        if (playerScript.groundCheck.isGrounded) playerAnimator.SetBool("isGrounded", true);
+
+        else playerAnimator.SetBool("isGrounded", false);
+
         //ATTACK ANIMATION CHECK
 
-        if (playerScript.atackUp) playerAnimator.SetTrigger("attackUp");
+        if (playerScript.atackUp)
+        {
+            playerAnimator.SetTrigger("attackUp");
+            playerScript.atackUp = false;
+        }
 
-        else if (playerScript.atackdown) playerAnimator.SetTrigger("attackDown");
+        else if (playerScript.atackdown)
+        {
+            playerAnimator.SetTrigger("attackDown");
+            playerScript.atackdown = false;
+        }
+
+        else if (playerScript.atack)
+        {
+            playerAnimator.SetTrigger("attack");
+            playerScript.atack = false;
+        }
     }
 }
