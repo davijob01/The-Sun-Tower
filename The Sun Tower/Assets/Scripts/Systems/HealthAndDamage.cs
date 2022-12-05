@@ -5,6 +5,7 @@ using UnityEngine;
 public class HealthAndDamage : MonoBehaviour
 {
     public Animator animator;
+    public GameObject deathParticle;
 
     public float health = 3;
     public int damage = 1;
@@ -31,13 +32,14 @@ public class HealthAndDamage : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("hitbox") && canTakeDamage)
         {
-            animator.SetTrigger("damageTaken");
+            animator.Play("damage");
 
             health -= collision.gameObject.GetComponent<HitBox>().damage;
             canTakeDamage = false;
 
             if (health <= 0)
             {
+                Instantiate(deathParticle, transform.position, Quaternion.Euler(-90, 0, 0));
                 gameObject.SetActive(false);
             }
         }

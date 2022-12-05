@@ -21,7 +21,6 @@ public class textTrigger : MonoBehaviour
     {
         if (isTalking)
         {
-            playerScript.canWalk = false;
 
             if (index == texts.Length)
             {
@@ -49,6 +48,7 @@ public class textTrigger : MonoBehaviour
         {
             isTalking = true;
             canvasUI.SetActive(true);
+            playerScript.canWalk = false;
         }
     }
 }

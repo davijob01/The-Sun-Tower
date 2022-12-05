@@ -49,16 +49,13 @@ public class OldBill : MonoBehaviour
                     wSprite.SetActive(true);
 
                     isTalking = false;
+                    playerScript.canWalk = true;
                 }
                 else
                 {
                     textMeshPro.SetText(texts[index]);
                 }
             }
-        }
-        else
-        {
-            playerScript.canWalk = true;
         }
     }
 

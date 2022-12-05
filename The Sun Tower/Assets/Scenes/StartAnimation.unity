@@ -633,7 +633,7 @@ MonoBehaviour:
   blackFade: {fileID: 164355897}
   startCooldown: 2
   start2Cooldown: 1
-  rotationMaxSpeed: 5
+  rotationMaxSpeed: 35
   rotationSpeed: 0
   rotationIncreaseSpeed: 2
   speed: -1000

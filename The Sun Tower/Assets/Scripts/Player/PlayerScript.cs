@@ -76,7 +76,7 @@ public class PlayerScript : MonoBehaviour
 
         //JUMPING
 
-        if (Input.GetKeyDown(KeyCode.Space) && groundCheck.isGrounded && !isJumping) //normal checks to realize the jumping actions
+        if (Input.GetKeyDown(KeyCode.Space) && groundCheck.isGrounded && !isJumping && canWalk) //normal checks to realize the jumping actions
         {
             isJumping = true;
             speed *= 1.25f; //higher speed while jumping

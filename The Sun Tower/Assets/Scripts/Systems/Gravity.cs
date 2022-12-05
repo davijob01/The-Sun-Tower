@@ -7,7 +7,7 @@ public class Gravity : MonoBehaviour
     public Vector2 acceleration;
     public float gravity = -9.81f;
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (acceleration.y > -20) acceleration.y += (4 * gravity) * Time.deltaTime;
 

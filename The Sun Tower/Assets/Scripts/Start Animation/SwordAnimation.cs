@@ -39,7 +39,7 @@ public class SwordAnimation : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (timer > 0f) timer -= Time.deltaTime;
         
