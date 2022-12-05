@@ -79,11 +79,11 @@ public class Health : MonoBehaviour
         }
     }
 
-    private void TakeDamage(float damage)
+    public void TakeDamage(float damage)
     {
         if(timer <= 0)
         {
-            animator.SetTrigger("damageTaken");
+            animator.Play("damage");
             health -= (int)damage;
             timer = damageCooldown;
         }

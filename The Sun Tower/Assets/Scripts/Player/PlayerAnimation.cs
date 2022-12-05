@@ -12,9 +12,16 @@ public class PlayerAnimation : MonoBehaviour
     {
         //WALKING ANIMATION CHECK
 
-        if(Input.GetAxis("Horizontal") >= 0.2 || Input.GetAxis("Horizontal") <= -0.2) playerAnimator.SetBool("isWalking", true);
+        if (playerScript.canWalk)
+        {
+            if (Input.GetAxis("Horizontal") >= 0.2 || Input.GetAxis("Horizontal") <= -0.2) playerAnimator.SetBool("isWalking", true);
+
+            else playerAnimator.SetBool("isWalking", false);
+        }
 
         else playerAnimator.SetBool("isWalking", false);
+
+        //GROUNDED CHECK
 
         if (playerScript.groundCheck.isGrounded) playerAnimator.SetBool("isGrounded", true);
 

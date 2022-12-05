@@ -30,13 +30,16 @@ public class HitBox : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.gameObject.CompareTag("flying enemy"))
-        {
-            isFlyingEnemy = true;
-        }
-
         if (collision.gameObject.CompareTag("enemy") || collision.gameObject.CompareTag("flying enemy"))
         {
+            if (!collision.gameObject.CompareTag("flying enemy"))
+            {
+                isFlyingEnemy = false;
+            }
+            else
+            {
+                isFlyingEnemy = true;
+            }
 
             enemyGravity = collision.gameObject.GetComponent<Gravity>();
             
@@ -70,34 +73,38 @@ public class HitBox : MonoBehaviour
 
             else //IF IT'S NOT ATTACKING UPWARDS OR DOWNWARDS THAN APPLY KNOCKBACK
             {
-                knockbacked = true;
-
                 //CHECKS IF ENEMY IS ON THE LEFT OR THE RIGHT OF THE PLAYER
 
                 if (collision.gameObject.transform.position.x > playerTR.position.x)
                 {
                     playerGravity.acceleration.x = -knockbackForce;//SETS THE KNOCKBACK WITH NEGATIVE FORCE
-                    if(!isFlyingEnemy)
+                    isRight = true;
+
+                    if (!isFlyingEnemy)
                     {
                         enemyGravity.acceleration.x = knockbackForce;
                     }
-                    isRight = true;
+
                 }
 
                 else if (collision.gameObject.transform.position.x < playerTR.position.x)
                 {
                     playerGravity.acceleration.x = knockbackForce; //SETS THE KNOCKBACK
+                    isRight = false;
+
                     if (!isFlyingEnemy)
                     {
                         enemyGravity.acceleration.x = -knockbackForce;
                     }
-                    isRight = false;
+
                 }
+
+                knockbacked = true;
             }
         }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (knockbacked)
         {
@@ -106,6 +113,7 @@ public class HitBox : MonoBehaviour
             if (isRight) //IF THE PLAYER IS ON THE RIGHT OF THE ENEMY
             {
                 playerGravity.acceleration.x += (float)(knockbackDecay * Time.deltaTime);
+
                 if(!isFlyingEnemy)
                 {
                     enemyGravity.acceleration.x -= (float)(knockbackDecay * Time.deltaTime);
@@ -114,10 +122,19 @@ public class HitBox : MonoBehaviour
             else //IF THE PLAYER IS ON THE LEFT OF THE ENEMY
             {
                 playerGravity.acceleration.x -= (float)(knockbackDecay * Time.deltaTime);
+
                 if (!isFlyingEnemy)
                 {
-                    enemyGravity.acceleration.x -= (float)(knockbackDecay * Time.deltaTime);
+                    enemyGravity.acceleration.x += (float)(knockbackDecay * Time.deltaTime);
                 }
+            }
+
+            //CHECKS IF KNOCKBACK ENDED AND RESETS THE VARIABLES
+
+            if (isRight && playerGravity.acceleration.x >= 0 || !isRight && playerGravity.acceleration.x <= 0)
+            {
+                playerGravity.acceleration.x = 0;
+                knockbacked = false;
             }
 
             if (!isFlyingEnemy)
@@ -127,14 +144,8 @@ public class HitBox : MonoBehaviour
                     enemyGravity.acceleration.x = 0;
                 }
             }
-        }
 
-        //CHECKS IF KNOCKBACK ENDED AND RESETS THE VARIABLES
-
-        if(isRight && playerGravity.acceleration.x >= 0 || !isRight && playerGravity.acceleration.x <= 0)
-        {
-            playerGravity.acceleration.x = 0;
-            knockbacked = false;
+            
         }
     }
 }

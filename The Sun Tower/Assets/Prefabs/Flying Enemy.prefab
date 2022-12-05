@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aIPath: {fileID: 575996216480829484}
+  aiDestination: {fileID: 575996216480829459}
   playerDetector: {fileID: 575996216966721607}
   playerTR: {fileID: 0}
 --- !u!114 &575996216480829485
@@ -272,6 +273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1812808781}
+  deathParticle: {fileID: 5992673027846919330, guid: 10f125b6e093f8441ac5f67a2c572abd, type: 3}
   health: 2
   damage: 1
 --- !u!1 &575996216966721606

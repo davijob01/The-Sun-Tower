@@ -483,8 +483,8 @@ MonoBehaviour:
   playerTR: {fileID: 4772953172653287491}
   playerGravity: {fileID: 4772953172653287488}
   playerScript: {fileID: 4772953172653287519}
-  knockbackForce: 17
-  upwardsKnockbackForce: 12
+  knockbackForce: 23
+  upwardsKnockbackForce: 14
   knockbackDecay: 150
   damage: 1
   knockbacked: 0

@@ -15,6 +15,7 @@ public class EnemyGroundMovement : MonoBehaviour
     public Transform playerTR;
     public Gravity gravityScr;
     public EnemyGroundCheck groundCheck;
+    public Animator enemyAnimator;
 
     [Header("Variables")]
 
@@ -22,9 +23,20 @@ public class EnemyGroundMovement : MonoBehaviour
     public float speed;
     public float runningSpeed;
     [HideInInspector] public float startSpeed;
+    
+    float stopDelay;
+    float nextStop;
+    float standTime;
+    float stopStanding;
+    bool isWalking = true;
 
     private void Start()
     {
+        stopDelay = Random.Range(7f, 12f);
+        standTime = Random.Range(3f, 4f);
+
+        nextStop = Time.time + stopDelay;
+
         startSpeed = speed;
 
         playerTR = GameObject.Find("Igu").GetComponent<Transform>();
@@ -37,7 +49,9 @@ public class EnemyGroundMovement : MonoBehaviour
 
         if (playerDetector.playerDetected)
         {
-            if(playerTR.position.x < transform.position.x)
+            enemyAnimator.SetBool("isWalking", true);
+
+            if (playerTR.position.x < transform.position.x)
             {
                 if (!facingRight) TurnEnemy();
             }
@@ -54,6 +68,30 @@ public class EnemyGroundMovement : MonoBehaviour
         }
         
         transform.Translate(Vector2.left * speed * Time.deltaTime);
+
+        //STOPPING SYSTEM
+
+        if(Time.time >= nextStop && isWalking && !playerDetector.playerDetected)
+        {
+            enemyAnimator.SetBool("isWalking", false);
+            speed = 0f;
+
+            isWalking = false;
+
+            stopStanding = Time.time + standTime;
+            standTime = Random.Range(2f, 3f);
+        }
+
+        if (Time.time >= stopStanding && !isWalking)
+        {
+            enemyAnimator.SetBool("isWalking", true);
+            speed = startSpeed;
+
+            nextStop = Time.time + stopDelay;
+            stopDelay = Random.Range(7f, 12f);
+            
+            isWalking = true;
+        }
 
         //TURNING CONTROLLER
 
