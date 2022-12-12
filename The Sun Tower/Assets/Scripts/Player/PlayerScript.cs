@@ -36,6 +36,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject hitBox;
     public GroundCheck groundCheck;
     public Gravity gravityScr;
+    public Collider2D hitboxCollider;
     
     //BASE MOVEMENT//////////////////////////////////////////////////
     
@@ -109,8 +110,6 @@ public class PlayerScript : MonoBehaviour
         {
             //resets the timers for the attack's cooldown and duration
 
-            hitBox.transform.position = new Vector3(0, 0, 0);
-
             atkCountdown = atkCooldown;
             atkTimer = atkDuration;
 
@@ -118,24 +117,21 @@ public class PlayerScript : MonoBehaviour
 
             if (Input.GetKey(KeyCode.W)) //checks if the attack is up
             {
-                hitBox.transform.localPosition = new Vector3(0.35f, 1.35f, 0);
-                hitBox.transform.localRotation = Quaternion.Euler(0, 0, 90);
+                hitBoxMove(.35f, 1.35f, 0, 90);
 
                 atackUp = true;
                 hitboxUp = true;
             }
             else if (Input.GetKey(KeyCode.S) && !groundCheck.isGrounded) //checks if the attack is down and if the player is jumping
             {
-                hitBox.transform.localPosition = new Vector3(0.35f, -0.85f, 0);
-                hitBox.transform.localRotation = Quaternion.Euler(0, 0, 90);
+                hitBoxMove(.35f, -.85f, 0, 90);
 
                 atackdown = true;
                 hitboxDown = true;
             }
             else //normal attack
             {
-                hitBox.transform.localPosition = new Vector3(1.8f, 0, 0);
-                hitBox.transform.localRotation = Quaternion.Euler(0, 0, 0);
+                hitBoxMove(1.8f);
 
                 atack = true;
             }
@@ -144,9 +140,18 @@ public class PlayerScript : MonoBehaviour
 
         if (atkTimer <= 0f && hitBox.activeSelf) //despawns the hitbox after attack duration and resets it's position and rotation
         {
-            hitBox.transform.position = new Vector3(0, 0, -15);
-            hitBox.transform.localRotation = Quaternion.Euler(0, 0, 0);
+            hitBoxMove(0, 0, -15, 0);
+
+            hitboxCollider.enabled = false;
         }
 
+    }
+
+   void hitBoxMove(float posX = 0, float posY = 0, float posZ = 0 ,float rotz = 0)
+    {
+        hitBox.transform.localPosition = new Vector3 (posX, posY, posZ);
+        hitBox.transform.localRotation = Quaternion.Euler(0, 0, rotz);
+
+        hitboxCollider.enabled = true;
     }
 }
